@@ -1,0 +1,10 @@
+/* App-level Layout & Utility Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}

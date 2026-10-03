@@ -1,0 +1,250 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  color: #ddd;
+  border-bottom: 2px solid #3c3c3c;
+  background-color: rgba(11, 0, 78, 0.4);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  color: #a855f7;
+}
+
+.logo-text {
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.logo-accent {
+  color: #a855f7;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #e3e3e3;
+  transition: color 0.2s ease, transform 0.15s ease;
+  position: relative;
+}
+
+.nav-links li:hover {
+  color: #ffffff;
+}
+
+.nav-links li.active {
+  color: #c084fc;
+}
+
+.watchlist-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.watchlist-badge {
+  background: #a855f7;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 12px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.currency-select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.currency-select:hover {
+  border-color: #ffffff;
+}
+
+.currency-select option {
+  background-color: #09005c;
+  color: #ffffff;
+}
+
+.signup-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #393939;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
+}
+
+.signup-btn:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Mobile Drawer */
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+
+.mobile-drawer {
+  width: min(85vw, 320px);
+  height: 100%;
+  background: #0f0728;
+  border-left: 1px solid #3c3c3c;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  animation: slideIn 0.25s ease;
+}
+
+.mobile-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-links li {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e3e3e3;
+  cursor: pointer;
+}
+
+.mobile-nav-links li:hover {
+  color: #c084fc;
+}
+
+.mobile-drawer-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-currency-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.mobile-currency-row select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #fff;
+}
+
+.mobile-signup {
+  width: 100%;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 16px 5%;
+  }
+  .nav-links {
+    display: none;
+  }
+  .mobile-toggle {
+    display: flex;
+  }
+}
+

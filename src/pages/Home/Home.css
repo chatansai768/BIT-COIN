@@ -1,0 +1,295 @@
+.home {
+  padding: 0px 10px;
+  padding-bottom: 100px;
+}
+
+.hero {
+  max-width: 620px;
+  margin: 60px auto 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(121, 39, 255, 0.18);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #c084fc;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero p {
+  width: 85%;
+  color: #e3e3e3;
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+}
+
+.search-form {
+  padding: 8px;
+  width: min(90%, 540px);
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  padding-left: 8px;
+}
+
+.search-icon {
+  color: #888;
+}
+
+.search-form input {
+  flex: 1;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  color: #222222;
+  background: transparent;
+  width: 100%;
+}
+
+.search-form button {
+  border: none;
+  background: #7927ff;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 11px 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-form button:hover {
+  background: #6310ea;
+}
+
+/* Market Highlights Ticker */
+.market-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  max-width: 840px;
+  margin: 0 auto 36px;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.hl-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hl-img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.hl-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a855f7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hl-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hl-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 4px;
+}
+
+.hl-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hl-change {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.hl-change.pos {
+  color: #00ff5f;
+}
+
+.hl-change.neg {
+  color: #ff4d4d;
+}
+
+.hl-vol {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Controls above table */
+.table-controls {
+  max-width: 840px;
+  margin: 0 auto 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.table-tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: #7927ff;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(121, 39, 255, 0.35);
+}
+
+.table-meta-count {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Pagination / Load more button */
+.table-pagination {
+  max-width: 840px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more-btn {
+  background: rgba(121, 39, 255, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.load-more-btn:hover {
+  background: #7927ff;
+  transform: translateY(-1px);
+}
+
+.load-more-btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #d1d5db;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin: 40px auto 28px;
+    gap: 18px;
+  }
+  .hero p {
+    width: 95%;
+    font-size: 15px;
+  }
+  .search-form {
+    width: 100%;
+    padding: 6px;
+  }
+  .search-form button {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+  .table-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .table-tabs {
+    width: 100%;
+  }
+  .tab-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 7px 8px;
+    font-size: 12px;
+  }
+}
+
